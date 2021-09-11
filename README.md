@@ -59,11 +59,6 @@ kubectl argo rollouts version
 kubectl create clusterrolebinding nicolas-cluster-admin-binding --clusterrole=cluster-admin --user=nicolas.hostert@mail.mcgill.ca
 ```
 
-# Create the namespace for the demo
-```
-kubectl create namespace argo-rollouts
-```
-
 # Deploy Prometheus
 ```
 kubectl apply -f prometheus.yaml
@@ -71,6 +66,7 @@ kubectl apply -f prometheus.yaml
 
 # Deploy Argo
 ```
+kubectl create namespace argo-rollouts
 kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
 ```
 
