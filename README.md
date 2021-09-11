@@ -27,7 +27,7 @@ gcloud container clusters get-credentials $clustername --region $region
 ```
 # Install istioctl
 ```
-cd argo-demo
+cd ArgoRolloutsDemo
 curl -L https://istio.io/downloadIstio | sh - 
 cd istio-1.11.2
 export PATH=$PWD/bin:$PATH
