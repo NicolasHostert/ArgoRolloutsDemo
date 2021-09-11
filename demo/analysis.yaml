@@ -6,7 +6,7 @@ spec:
   # this analysis template requires a service name and namespace to be supplied to the query
   metrics:
   - name: success-rate
-    initialDelay: 10s
+    initialDelay: 40s
     interval: 10s
     successCondition: len(result) == 0 || result[0] > 0.90
     provider:
