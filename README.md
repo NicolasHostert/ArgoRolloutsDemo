@@ -80,17 +80,18 @@ cd ~/argo-demo/demo
 kubectl kustomize . | kubectl apply -f -
 ```
 
-# Deploy a new image and watch
+# Open the application
+
+http://nicolas.cloud-montreal.ca/
+
+# Deploy a good image and watch
 ```
 kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:red
 kubectl argo rollouts get rollout istio-rollout -w
 ```
-# Update the pass rule to simulate a failure
-```
-kubectl apply -f analysis-fail.yaml
-```
 
-# Deploy a new image and watch it fail and rollback
-kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:bad-yellow
+# Deploy a bad image and watch it fail and rollback
+```
+kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:yellow
 kubectl argo rollouts get rollout istio-rollout -w
-
+```
