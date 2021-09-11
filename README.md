@@ -80,14 +80,15 @@ kubectl kustomize . | kubectl apply -f -
 
 http://nicolas.cloud-montreal.ca/
 
-# Deploy a good image and watch
+# Deploy an image and watch
 ```
 kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:red
 kubectl argo rollouts get rollout istio-rollout -w
 ```
 
-# Deploy a bad image and watch it fail and rollback
+You can also deploy other images to test, and play with the error % slider
 ```
 kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:yellow
-kubectl argo rollouts get rollout istio-rollout -w
+kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:red
+kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:green
 ```
