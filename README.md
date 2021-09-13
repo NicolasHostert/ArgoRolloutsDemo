@@ -72,7 +72,7 @@ kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/rele
 
 # Deploy the demo
 ```
-cd ~/argo-demo/demo
+cd demo
 kubectl kustomize . | kubectl apply -f -
 ```
 
