@@ -27,7 +27,6 @@ gcloud container clusters get-credentials $clustername --region $region
 ```
 # Install istioctl
 ```
-cd ArgoRolloutsDemo
 curl -L https://istio.io/downloadIstio | sh - 
 cd istio-1.11.2
 export PATH=$PWD/bin:$PATH
@@ -61,6 +60,7 @@ kubectl create clusterrolebinding nicolas-cluster-admin-binding --clusterrole=cl
 
 # Deploy Prometheus
 ```
+cd ArgoRolloutsDemo
 kubectl apply -f prometheus.yaml
 ```
 
