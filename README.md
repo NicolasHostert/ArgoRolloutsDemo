@@ -80,7 +80,7 @@ kubectl kustomize . | kubectl apply -f -
 
 http://nicolas.cloud-montreal.ca/
 
-# Deploy an image and watch
+# Deploy an image and play
 ```
 kubectl argo rollouts set image istio-rollout istio-rollout=argoproj/rollouts-demo:red
 kubectl argo rollouts get rollout istio-rollout -w
